@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0ae4ab847d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="FaceBookPage1">
+        <div class="top_Bar">
+        
+
+            <div class="top_Bar_Search">
+                <a id="logo"><i class="fa-brands fa-facebook" style="color: #3a52a7; cursor: pointer;"></i></i></a>
+                <a id="arrow"><i class="fa-solid fa-arrow-left"></i></a>
+                <div id="searchBox" class="Search">
+                
+                    <a id="searchBarIcon"><i class="fa fa-search" style="color: rgb(108, 108, 108);" aria-hidden="true"></i></a>
+    
+                    <input onfocus="onSearchFocus()" onblur="onSearchBlur()" type="search" id="searchBar" placeholder="Search Facebook">
+    
+                </div>
+            </div>
+    
+            <div class="top_Bar_Nav">
+    
+                <nav class="GridBoxNav">
+                    <div id="HomeBtn" class="FourIcons Home activeTopPanels" onclick="makeButtonBlue('HomeBtn')">
+                        <a id="HomeIcon"><i id="homeIcon4" class="fa fa-home activeTopButtons" aria-hidden="true"></i></a>
+                        <div class="shadowHolder">
+                            <p>Home</p>
+                        </div>
+                    </div>
+    
+                    <!--SPACE-->
+    
+                    <div id="FriendsBtn" class="FourIcons Friends" onclick="makeButtonBlue('FriendsBtn')">
+                        <a id="FriendsIcon"><i id="friendsIcon4" class="fa btn fa-user-o" aria-hidden="true"></i></a>
+                        <div class="shadowHolder">
+                            <p>Friends</p>
+                        </div>
+                    </div>
+    
+                    <!--SPACE-->
+    
+                    <div id="VideosBtn" class="FourIcons Video" onclick="makeButtonBlue('VideosBtn')">
+                        <a id="VideoIcon"><i id="videosIcon4" class="fa btn fa-television" aria-hidden="true"></i></a>
+                        <div class="shadowHolder">
+                            <p>Video</p>
+                        </div>
+                    </div>
+    
+                    <!--SPACE-->
+    
+                    <div id="GroupsBtn" class="FourIcons Groups" onclick="makeButtonBlue('GroupsBtn')">
+                        <a id="GroupsIcon"><i id="groupsIcon4" class="fa btn fa-user-circle" aria-hidden="true"></i></a>
+                        <div class="shadowHolder">
+                            <p>Groups</p>
+                        </div>
+                    </div>
+    
+                </nav>
+    
+            </div>
+    
+            <div class="top_Bar_Control">
+                <nav class="FlexBoxNav">
+    
+                    <div id="MenuBtn" class="FourControl Menu" onclick="showMenu(), makeButtonBlue('MenuBtn')">
+                        <a id="MenuIcon"><i class="fa-solid fa-bars"></i></i></a>
+                        <div class="shadowHolder">
+                            <p>Menu</p>
+                        </div>
+                    </div>
+    
+    
+                    <!--SPACE-->
+    
+    
+                    <div id="MessengerBtn" class="FourControl Msg" onclick="showMessageMenu(), makeButtonBlue('MessengerBtn')">
+                        <a id="msgIcon"><i class="fa-brands fa-facebook-messenger"></i></a>
+                        <div class="shadowHolder">
+                            <p>Messenger</p>
+                        </div>
+                    </div>
+    
+    
+                    <!--SPACE-->
+    
+    
+                    <div id="NotifyBtn" class="FourControl Notify" onclick="showNotifyMenu(), makeButtonBlue('NotifyBtn')">
+                        <a id="NotifyIcon"><i class="fa-solid fa-bell"></i></a>
+                        <div class="shadowHolder">
+                            <p>Notifications</p>
+                        </div>
+                    </div>
+    
+    
+                    <!--SPACE-->
+    
+    
+                    <div class="FourControl Account" onclick="showSliderMenu()">
+                        <a id="AccountIcon"><img style="border-radius: 25px;" src="profile.jpg" width="40px" height="40px" alt="User"></a>
+                        <div class="shadowHolder">
+                            <p>Account</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="slideNotify">
+            <div class="notify1">
+                <h2 style="position: relative; display: inline-block;">Notifications</h2>
+                <a id="notifyMenu"><i class="fa-solid fa-ellipsis" style="color: #65676b;"></i></a>
+            </div>
+            <div class="notify2">
+                <button id="notifyBtn1" onclick="makeButtonBlue('notifyBtn1')" class="notifyButtons notifyButton1 activeButton">All</button>
+                <button id="notifyBtn2" onclick="makeButtonBlue('notifyBtn2')" class="notifyButtons notifyButton1 ">Unread</button>
+            </div>
+            <img src="./image/bell.png" alt="No Notifications" width="112px" height="102px" style="position: relative; align-self: center; top: 10px;">
+            <h2 style="color: #65676B; position: relative; align-self: center;">You have no notifications</h2>
+        </div>
+        <div class="slideProfile" style="opacity: 0;">        
+            <div class="Profile">
+                <div class="currentProfile">
+                    <a id="AccountIcon2"><img style="border-radius: 25px;" src="profile.jpg" width="40px" height="40px" alt="User"></a>
+                    <p class="UserName">Giorgi Giorgi</p>
+                </div>
+                <hr style="color: rgba(132, 132, 132, 0.437); width: 300px;">
+            </div>
+    
+            <div class="menuSelection">
+                <div class="SettingsTab menuTabIcons">
+                    <div class="Settings FiveIcons">
+                        <a id="PrivacyIcon"><i class="fa-solid fa-gear" style="color: #000000;"></i></a>
+                    </div>
+                    <p>Settings & privacy</p>
+                    <a class="rightArrow"><i class="fa-solid fa-angle-right" style="color: #4f4f4f;"></i></a>
+                </div>
+                
+    
+                <div class="SupportTab menuTabIcons">
+                    <div class="Help FiveIcons">
+                        <a id="HelpIcon"><i class="fa-solid fa-circle-question" style="color: #000000;"></i></a>
+                    </div>
+                    <p>Help & support</p>
+                    <a class="rightArrow"><i class="fa-solid fa-angle-right" style="color: #4f4f4f;"></i></a>
+                </div>
+                
+    
+                <div class="DisplayTab menuTabIcons">
+                    <div class="Display FiveIcons">
+                        <a id="MoonIcon"><i class="fa-solid fa-moon" style="color: #000000;"></i></a>
+                    </div>
+                    <p>Display & accessibility</p>
+                    <a class="rightArrow"><i class="fa-solid fa-angle-right" style="color: #4f4f4f;"></i></a>
+                </div>
+                
+    
+                <div class="FeedbackTab menuTabIcons">
+                    <div class="Feedback FiveIcons">
+                        <a id="Feedback"><i class="fa-solid fa-triangle-exclamation" style="color: #000000;"></i></a>
+                    </div>
+                    <p>Give Feedback</p>
+                </div>
+                
+    
+                <div class="logoutTab menuTabIcons">
+                    <div class="LogOut FiveIcons">
+                        <a id="LogOut"><i class="fa-solid fa-right-from-bracket" style="color: #000000;"></i></a>
+                    </div>
+                    <p>Log out</p>
+                </div>
+            </div>
+    
+            <div class="menuTags" style="font-size: 12px;color: #65676B; top: -15px; position: relative;">
+                Privacy  · Terms  · Advertising  · Ad choices   · Cookies  · Meta © 2024
+                
+            </div>
+        </div>
+        <div onmouseenter="leftScrollOn()" onmouseleave="leftScrollOff()" class="leftTab">
+            <div class="leftTabFlex">
+                <div class="firstPart">
+                    <div class="firstPartCard icon-1">
+                        <div class="profileIcon1 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="profile.jpg" width="35px" height="35px" alt="User"></a>
+                            <p class="icon-1Text">Giorgi Giorgi</p>
+                        </div>
+                    </div>   
+
+                    <div class="firstPartCard icon-2">
+                        <div class="friendsIcon2 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/friend.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Find Friends</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-3">
+                        <div class="memoriesIcon3 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/time.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Memories</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-4">
+                        <div class="savedsIcon4 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/saved.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Saved</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-5">
+                        <div class="groupsIcon5 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/group.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Groups</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-6">
+                        <div class="videoIcon6 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/watch.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Videos</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-7">
+                        <div class="feedsIcon7 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/feed.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Feeds</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-8">
+                        <div class="eventsIcon8 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/calendar.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Events</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-9">
+                        <div class="adsIcon9 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/ads.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Ads Manager</p>
+                        </div>
+                    </div>   
+                    
+                    <div class="firstPartCard icon-10">
+                        <div class="metaIcon10 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/meta.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Meta Quest</p>
+                        </div>
+                    </div>   
+
+                    <div class="firstPartCard icon-11">
+                        <div class="fundraisersIcon11 left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/donation.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Fundraisers</p>
+                        </div>
+                    </div>   
+
+                    <!--    HIDDEN ICONS     -->
+
+
+                    
+                    <div class="firstPartCard hiddenIcons">
+                        <div class="leftBarClimate left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/climate.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Climate Science Centre</p>
+                        </div>
+                    </div>
+
+                    <div class="firstPartCard hiddenIcons">
+                        <div class="leftBarGaming left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/gaming.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Gaming Video</p>
+                        </div>
+                    </div>
+
+                    <div class="firstPartCard hiddenIcons">
+                        <div class="leftBarMessenger left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px; left: 3px;" src="./image/messenger.png" width="30px" height="30px" alt="friends"></a>
+                            <p class="icon-1Text">Messenger</p>
+                        </div>
+                    </div>
+
+                    <div class="firstPartCard hiddenIcons">
+                        <div class="leftBarOrders left-tab-icons">
+                            <a><img style="border-radius: 25px;transform: rotateZ(-45deg); position: relative; top: 10px;" src="./image/credit-card.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Orders and payments</p>
+                        </div>
+                    </div>
+
+                    <div class="firstPartCard hiddenIcons">
+                        <div class="leftBarPages left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/page.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Pages</p>
+                        </div>
+                    </div>
+
+                    <div class="firstPartCard hiddenIcons">
+                        <div class="leftBarPlayGames left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/controller.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Play Games</p>
+                        </div>
+                    </div>
+
+                    <div class="firstPartCard hiddenIcons">
+                        <div class="leftBarRecent left-tab-icons">
+                            <a><img style="border-radius: 25px; position: relative; top: 10px;" src="./image/frame.png" width="35px" height="35px" alt="friends"></a>
+                            <p class="icon-1Text">Recent ad activity</p>
+                        </div>
+                    </div>
+
+                    
+                    <div onclick="showMore()" class="firstPartCard icon-12 showMore">
+                        <div class="seemoreIcon12 left-tab-icons">
+                            <a><img class="showButton" style="border-radius: 25px; position: relative; top: 8px; left: 4px;" src="./image/down-arrow.png" width="30px" height="30px" alt="friends"></a>
+                            <p class="icon-1Text">See More</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="secondPart">
+                    <h5 style="position: relative; height: 65px; top: 0; box-sizing: border-box; width: 330px; color: rgba(0, 0, 0, 0.338); font-size: 12px;">Privacy  · Terms  · Advertising  · Ad choices   ·  Cookies  · Meta © 2024</h5>
+                </div>
+            </div>
+        </div>
+        <div class="middlePart">
+            <div class="middlePartFlex">
+                <img id="scrollStoryLeft" onclick="scrollStory('scrollStoryLeft')" src="./image/down_arrow.png" alt="arrow" width="45px" height="45px">
+                <div class="storyTab">
+                    <div class="storyCard yourStory">
+                        <img src="./image/me.jpg" alt="Your Picture">
+                        <div class="plus">
+                            <a class="plusButton"><i style="color: white; position: relative; top: 4px; left: 0px;" class="fa-2x fa-solid fa-plus"></i></a>
+                            <h4 style="color: black; width: 100px; position: relative; left: -35px;">Create Story</h4>
+                        </div>
+                    </div>
+
+                    <div class="storyCard story2">
+                        <img style="object-fit: cover;" src="./image/contact_5.jpg" alt="Your Picture">
+                        <img src="./image/contact_5.jpg" alt="User2">
+                        <p style="z-index: 4; position: relative; top: -110px; left: 10px; color: white;">User1</p>
+                    </div>
+
+                    <div class="storyCard story3">
+                        <img style="object-fit: cover;" src="./image/contact_4.jpg" alt="Your Picture">
+                        <img src="./image/contact_4.jpg" alt="User3">
+                        <p style="z-index: 4; position: relative; top: -110px; left: 10px; color: white;">User2</p>
+                    </div>
+
+                    <div class="storyCard story4">
+                        <img style="object-fit: cover;" src="./image/contact_3.jpg" alt="Your Picture">
+                        <img src="./image/contact_3.jpg" alt="User4">
+                        <p style="z-index: 4; position: relative; top: -110px; left: 10px; color: white;">User2</p>
+                    </div>
+
+                    <div class="storyCard story5">
+                        <img style="object-fit: cover;" src="./image/contact_2.jpg" alt="Your Picture">
+                        <img src="./image/contact_2.jpg" alt="User5">
+                        <p style="z-index: 4; position: relative; top: -110px; left: 10px; color: white;">User3</p>
+                    </div>
+                </div>
+
+                <img id="scrollStoryRight" onclick="scrollStory('scrollStoryRight')" src="./image/down_arrow.png" alt="arrow" width="45px" height="45px">
+
+                <div class="yourPostTab">
+                    <div class="postTopic">
+                        <a id="AccountIcon3"><img style="border-radius: 25px;" src="profile.jpg" width="40px" height="40px" alt="User"></a>
+                        <input type="search" id="newPost" placeholder="What's on your mind, Gorgi?">
+                    
+                    </div>
+
+                    <div class="postIcons">
+                        <div class="postIcon1 postIcon">
+                            <img src="image/video1.png" alt="Video" width="24px" height="24px">
+                            <p>Live video</p>
+                        </div>
+
+                        <div class="postIcon2 postIcon">
+                            <img src="image/photo1.png" alt="Photo" width="24px" height="24px">
+                            <p>Photo/video</p>
+                        </div>
+
+                        <div class="postIcon3 postIcon">
+                            <img src="image/feeling1.png" alt="Feeling" width="24px" height="24px">
+                            <p>Feeling/activity</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="postTab">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="rightTab">
+            <div class="rightTabFlex">
+                <div class="contacts">
+                    <p>Contacts</p>
+                    <div class="icons">
+                        <a id="searchBarIcon2"><i class="fa fa-search" style="color: rgb(108, 108, 108);" aria-hidden="true"></i></a>
+                        <a id="notifyMenu2"><i class="fa-solid fa-ellipsis" style="color: #65676b;"></i></a>
+                    </div>
+                </div>
+
+                <div class="people">
+                    <div class="card">
+                        <img src="./image/jld.jpg" alt="Jlds Akademia">
+                        <div class="status">
+                            <span>●</span>
+                            <span>●</span>
+                        </div>
+                        <div class="name">
+                            <p style="display: inline-block; position: relative; font-family: PoppinsMed;">Jlds Akademia</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./image/jld.jpg" alt="Jlds Akademia">
+                        <div class="status">
+                            <span>●</span>
+                            <span>●</span>
+                        </div>
+                        <div class="name">
+                            <p style="display: inline-block; position: relative; font-family: PoppinsMed;">Jlds Akademia</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./image/jld.jpg" alt="Jlds Akademia">
+                        <div class="status">
+                            <span>●</span>
+                            <span>●</span>
+                        </div>
+                        <div class="name">
+                            <p style="display: inline-block; position: relative; font-family: PoppinsMed;">Jlds Akademia</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./image/jld.jpg" alt="Jlds Akademia">
+                        <div class="status">
+                            <span>●</span>
+                            <span>●</span>
+                        </div>
+                        <div class="name">
+                            <p style="display: inline-block; position: relative; font-family: PoppinsMed;">Jlds Akademia</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./image/jld.jpg" alt="Jlds Akademia">
+                        <div class="status">
+                            <span>●</span>
+                            <span>●</span>
+                        </div>
+                        <div class="name">
+                            <p style="display: inline-block; position: relative; font-family: PoppinsMed;">Jlds Akademia</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./image/jld.jpg" alt="Jlds Akademia">
+                        <div class="status">
+                            <span>●</span>
+                            <span>●</span>
+                        </div>
+                        <div class="name">
+                            <p style="display: inline-block; position: relative; font-family: PoppinsMed;">Jlds Akademia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+
+
+</html>

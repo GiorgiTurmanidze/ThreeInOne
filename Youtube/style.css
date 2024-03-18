@@ -1,0 +1,701 @@
+:root {
+    --lightGrayBackground: #121212;
+    --grayBackground: #222222;
+    --background: #0F0F0F;
+    --hoverColor: #3D3D3D;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(./fonts/Lato.ttf);
+}
+
+@font-face {
+    font-family: PoppinsMed;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsReg;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowReg;
+    src: url(./fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowMed;
+    src: url(./fonts/Barlow-Medium.ttf);
+}
+
+.Youtube {
+    position: relative;
+    margin: 0 auto;
+    font-family: PoppinsMed;
+    background-color: var(--background);
+}
+
+.youtubeFlexBox {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.shadowHolder {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    top: 57px;
+    font-size: 12px;
+    font-family: lato;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    z-index: 4;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(96, 96, 96, 0.742);
+    padding: 0px 10px;
+    transition: all .3s ease;
+}
+
+.topBar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: var(--background);
+    padding: 5px 16px;
+    height: 56px;
+    align-items: center;
+    z-index: 2;
+    justify-content: space-between;
+}
+
+.topLeftSide {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 20px;
+    height: 56px;
+    align-items: center;
+}
+
+.topMiddleSide {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 40px;
+    min-width: 300px;
+    width: 700px;
+}
+
+.topRightSide {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 15px;
+    right: 50px;
+}
+
+.fa-bell {
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.slideProfile {
+    position: fixed;
+    display: none;
+    float: right;
+    width: 300px;
+    height: 700px;
+    right: 85px;
+    top: 10px;
+    border-radius: 15px;
+    background-color: var(--grayBackground);
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.slideProfileFlex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.slideProfileTop {
+    display: flex;
+    margin: 0;
+    gap: 10px;
+    width: 300px;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+}
+
+.slideProfileBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    position: relative;
+    top: 10px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.profileSlideCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: relative;
+    width: 100%;
+    align-items: start;
+    padding-bottom: 5px;
+}
+
+.slideProfileBottom::-webkit-scrollbar {
+    position: relative;
+    width: 9px;
+}
+
+.slideProfileBottom::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba(125, 125, 125, 0.396);
+}
+
+.slideProfileIcons {
+    position: relative;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.slideProfileIcons:hover {
+    background-color: #3E3E3E;
+    cursor: pointer;
+}
+
+.slideProfileIcons a i {
+    font-size: 20px;
+    position: relative;
+}
+
+.slideProfileIcons a {
+    width: 20px;
+    height: 20px;
+}
+
+.slideProfileIcons p {
+    font-size: 16px;
+    position: relative;
+    display: inline;
+    left: 20px;
+    color: white;
+    font-family: lato;
+}
+
+.slideNotify {
+    position: fixed;
+    display: none;
+    float: right;
+    width: 460px;
+    z-index: 2;
+    height: 620px;
+    right: 85px;
+    top: 54px;
+    background-color: var(--grayBackground);
+    border-radius: 15px;
+}
+
+.slideNotifyFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.slideNotifyTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 91.4%;
+    padding: 0 20px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.182)
+}
+
+.fa-gear {
+    color: var(--grayBackground);
+    -webkit-text-stroke: 1px white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.slideNotifyBottom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    bottom: 150px;
+}
+
+.notifyBell {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.fa-bell2 {
+    font-size: 100px;
+    border: none;
+    color: #717171;
+    -webkit-text-stroke: 0;
+}
+
+.menu {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+.menu:hover {
+    background-color: #272727;
+}
+
+.logo {
+    padding: 8px;
+    cursor: pointer;
+    min-width: 130px;
+}
+
+.logo h3 {
+    display: inline-block;
+    color: white;
+    font-family: BarlowMed;
+    position: relative;
+    top: -3px;
+    font-size: 21px;
+}
+
+.logo img {
+    position: relative;
+    top: 0px;
+}
+
+.searchButton {
+    background-color: var(--lightGrayBackground);
+    width: 536px;
+    height: 40px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.093);
+    outline: none;
+    padding-left: 15px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-family: sans-serif;
+}
+
+.searchButtonIcon {
+    position: relative;
+    display: inline;
+    background-color: var(--grayBackground);
+    padding: 8.960px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.093);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.searchButtonIcon:hover .shadowHolder{
+    display: flex;
+    transition: all .3s eas;
+}
+
+.MicrophoneIcon {
+    background-color: var(--grayBackground);
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.MicrophoneIcon:hover {
+    background-color: var(--hoverColor);
+    transition: all .3s ease;
+}
+
+.MicrophoneIcon:hover .shadowHolder {
+    display: flex;
+}
+
+.deleteText {
+    display: none;
+    font-family: BarlowReg;
+    font-size: 20px;
+    padding: 10px 16px;
+    border-radius: 50px;
+}
+
+.showDeleteButton {
+    display: block;
+}
+
+.makeBorderBlue {
+    border: 1px solid rgb(41, 70, 255);
+}
+
+.deleteText:hover {
+    background-color: var(--hoverColor);
+    transition: all .3s ease;
+}
+
+.upload {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 50px;
+}
+
+.upload:hover {
+    background-color: var(--hoverColor);
+    transition: all .3s ease;
+}
+
+.upload:hover .shadowHolder {
+    display: flex;
+}
+
+.Notifications {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 50px;
+}
+
+.Notifications:hover {
+    background-color: var(--hoverColor);
+    transition: all .3s ease;
+}
+
+.Notifications:hover .shadowHolder {
+    display: flex;
+    transition: all .3s ease;
+}
+
+.pfp {
+    cursor: pointer;
+}
+
+
+.bottomBar {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    left: 90px;
+    position: relative;
+    top: 80px;
+    padding: 20px 20px;
+    width: 100%;
+    z-index: 0;
+    background-color: var(--background);
+}
+
+.bottomBarGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 330px));
+    width: 100%;
+    column-gap: 15px;
+}
+
+.card {
+    width: 328px;
+    height: 300px;
+    position: relative;
+    border-radius: 12px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    width: 100%;
+    height: 184px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.link a {
+    position: absolute;
+}
+
+.link img {
+    background-color: transparent;
+    position: relative;
+    height: 100%;
+    min-width: 1px;
+    min-height: 1px;
+    display: inline-block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 90%;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.card2Details {
+    font-size: 15px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.details a {
+    text-decoration: none;
+    color: white;
+}
+
+.details a p {
+    position: relative;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #adadad;
+    transition: all .3s ease;
+}
+
+.details a p:hover {
+   color: white;
+}
+
+.details a span {
+    position: relative;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #adadad;
+}
+
+.details img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+}
+
+
+.leftBar {
+    display: flex;
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    background-color: var(--background);
+    top: 70px;
+    flex-direction: column;
+}
+
+.leftBarBefore {
+    display: block;
+}
+
+.leftBarAfter {
+    display: none;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: var(--background);
+    top: 70px;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.leftBarAfter::-webkit-scrollbar {
+    position: relative;
+    width: 9px;
+    height: 60px;
+}
+
+.leftBarAfter::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba(125, 125, 125, 0.396);
+}
+
+.leftBarAfterFlex {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    padding: 0 20px;
+    position: relative;
+    gap: 20px;
+}
+
+.leftBarIcons {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    padding-left: 10px;
+    width: 90%;
+    border-radius: 13px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.leftBarIcons:hover {
+    background-color: var(--grayBackground);
+}
+
+.leftBarBoxes {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.214);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.leftBarIcons a {
+    font-size: 18px;
+}
+
+.leftBarTitles {
+    color: white;
+    position: relative;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    border-radius: 13px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.leftBarTitles:hover {
+    background-color: var(--grayBackground);
+}
+
+.leftBarIcons p {
+    color: white;
+    font-family: lato;
+    font-size: 15px;
+}
+
+.leftBarFlexBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: start;
+    justify-content: center;
+}
+
+.leftBarHome {
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    width: 64px;
+    padding: 16px 0 5px;
+    border-radius: 10px;
+    text-align: center;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.leftBarHome:hover {
+    background-color: #272727;
+}
+
+.leftBarHome a {
+    font-size: 16px;
+}
+
+.leftBarHome p {
+    color: white;
+    font-size: 10px;
+    position: relative;
+    text-align: center;
+    top: -5px;
+    font-family: lato;
+}
+
+.fa-film {
+    color: white;
+}
+
+.LastLinks a{
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+}
+
+@media screen and (max-width: 728px) {
+    .logo {
+        display: none;
+    }
+
+    .upload {
+        display: none;
+    }
+
+    .Notifications {
+        display: none;
+    }
+
+    .topRightSide {
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 1185px) {
+    .topMiddleSide {
+        width: 500px;
+    }
+
+    .topRightSide {
+        min-width: 240px;
+    }
+}

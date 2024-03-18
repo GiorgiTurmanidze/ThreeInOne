@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <script src="https://kit.fontawesome.com/0ae4ab847d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="Youtube">
+        <div class="youtubeFlexBox">
+            <div class="topBar">
+                <div class="topLeftSide">
+                    <div onclick="showLeftMenu()" class="menu">
+                        <a class="leftSideMenu"><i class="fa-solid fa-bars" style="color: #ffffff; font-size: 20px; position: relative; top: 2px;"></i></a>
+                    </div>
+                    <div class="logo">
+                        <img src="./images/Youtube_logo.png" alt="youtube" width="28px" height="20px">
+                        <h3>YouTube</h3>
+                    </div>
+                </div>
+
+                <div class="topMiddleSide">
+                    <input onblur="removeBorderBlue()" onfocus="makeBorderBlue()" class="searchButton" name="search" type="text" placeholder="Search" style="text-align: left; font-family: BarlowMed; font-size: 17px;">
+                    <span onclick="deleteText()" class="deleteText" style="position: absolute; color: white; right: 533px; cursor: pointer;">X</span>
+                    <a class="searchButtonIcon" >
+                        <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                        <div style="left: 6px;" class="shadowHolder">
+                            <p>Search</p>
+                        </div>
+                    </a>
+                    <a class="MicrophoneIcon">
+                        <i class="fa fa-microphone" style="color: #ffffff;"></i>
+                        <div style="right: 360px; top: 68px;" class="shadowHolder">
+                            <p>Search with your voice</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="topRightSide">
+                    <a class="upload" style="text-align: center;">
+                        <i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i>
+                        <div class="shadowHolder" style="left: -8px; top: 55px;">
+                            <p>Upload</p>
+                        </div>
+                    </a>
+                    <a onclick="showNotifications()" class="Notifications">
+                        <i class="fa-solid fa-bell" style="color: #0F0F0F;"></i>
+                        <div style="left: 33px; top: 55px;" class="shadowHolder">
+                            <p>Notifications</p>
+                        </div>
+                    </a>
+                    <img onclick="showProfileMenu()" class="pfp" src="./images/pfp.jpg" alt="You" width="32px" height="32px" style="border-radius: 50px;">
+                </div>
+
+            </div>
+
+            <div class="slideNotify">
+                <div class="slideNotifyFlex">
+                    <div class="slideNotifyTop">
+                        <p style="font-family: lato; font-size: 18px;">Notifications</p>
+                        <a><i class="fa-solid fa-gear"></i></a>
+                    </div>
+
+                    <div class="slideNotifyBottom">
+                        <a class="notifyBell"><i class="fa-sharp fa-regular fa-bell fa-bell2"></i></a>
+                        <p style="color: #8d8d8d;">Your notifications live here</p>
+                        <p style="text-wrap: wrap; box-sizing: border-box; width: 300px; position: relative; top: -20px; text-align: center; font-family: lato; color: #8d8d8d; font-size: 15px;">Subscribe to your favorite channels to get notified about their latest videos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slideProfile">
+                <div class="slideProfileFlex">
+                    <div class="slideProfileTop">
+                        <div class="profile" style="position: relative; top: -20px;">
+                            <img style="border-radius: 50px;" src="./images/pfp.jpg" alt="Your PFP" width="40px" height="40px">
+                        </div>
+                        <div class="profileUser">
+                            <p style="display: inline; color: rgba(255, 255, 255, 0.859);">Test Gmail</p>
+                            <p style="margin: 0; margin-bottom: 5px; color: rgba(255, 255, 255, 0.814);">@user-fy2ox9cl7k</p>
+                            <a style="display: block; margin-bottom: 20px; text-decoration: none; font-family: lato; color: rgb(114, 158, 255);" href="">View your channel</a>
+                        </div>
+                    
+                    </div>
+
+                    <div class="slideProfileBottom">
+                        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.196);" class="gr1 profileSlideCard">
+                            <div class="element1 slideProfileIcons">
+                                <a><i class="fa-brands fa-google" style="color: #ffffff;"></i></a>
+                                <p>Google Account</p>
+                            </div>
+
+                            <div class="element2 slideProfileIcons">
+                                <a><i class="fa-regular fa-circle-user" style="color: #ffffff;"></i></a>
+                                <p>Switch account</p>
+                            </div>
+
+                            <div class="element3 slideProfileIcons">
+                                <a><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i></a>
+                                <p>Sign out</p>
+                            </div>
+                        </div>
+
+                        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.196);" class="gr2 profileSlideCard">
+                            <div class="element4 slideProfileIcons">
+                                <a><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></a>
+                                <p>YouTube Studio</p>
+                            </div>
+
+                            <div class="element5 slideProfileIcons">
+                                <a><i class="fa-solid fa-dollar-sign" style="color: #ffffff;"></i></a>
+                                <p>Purchases and Memberships</p>
+                            </div>
+                        </div>
+
+                        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.196);" class="gr3 profileSlideCard">
+                            <div class="element6 slideProfileIcons">
+                                <a><i class="fa-solid fa-shield-halved" style="color: #ffffff;"></i></a>
+                                <p>Your data in YouTube</p>
+                            </div>
+
+                            <div class="element7 slideProfileIcons">
+                                <a><i class="fa-regular fa-moon" style="color: #ffffff;"></i></a>
+                                <p>Appearance: Dark</p>
+                            </div>
+
+                            <div class="element8 slideProfileIcons">
+                                <a><i class="fa-solid fa-language" style="color: #ffffff;"></i></a>
+                                <p>Language: English</p>
+                            </div>
+
+                            <div class="element9 slideProfileIcons">
+                                <a><i class="fa-solid fa-globe" style="color: #ffffff;"></i></a>
+                                <p>Location: Poland</p>
+                            </div>
+
+                            <div class="element10 slideProfileIcons">
+                                <a><i class="fa-regular fa-keyboard" style="color: #ffffff;"></i></a>
+                                <p>Keyboard Shortcuts</p>
+                            </div>
+                        </div>
+
+                        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.196);" class="gr4 profileSlideCard">
+                            <div class="element11 slideProfileIcons">
+                                <a><i class="fa-solid fa-gear"></i></a>
+                                <p>Settings</p>
+                            </div>
+                        </div>
+
+                        <div class="gr5 profileSlideCard">
+                            <div class="element12 slideProfileIcons">
+                                <a><i class="fa-solid fa-circle-question" style="color: #ffffff;"></i></a>
+                                <p>Help</p>
+                            </div>
+
+                            <div class="element13 slideProfileIcons">
+                                <a><i class="fa-solid fa-triangle-exclamation" style="color: #ffffff;"></i></a>
+                                <p>Send feedback</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bottomBar">
+                <div class="bottomBarGrid">
+                    <div class="card  card1">
+                        <div class="link card1Link">
+                            <a href="https://www.youtube.com/watch?v=hGQPx5DZjFc">
+                                <img src="./images/vid1.jpg" alt="FirstVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card1Details">
+                            <a href="https://www.youtube.com/@PavelskiBH">
+                                <img src="./images/vid1pfp.jpg" alt="Pavelski">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=hGQPx5DZjFc">I Fought Against the BEST Nix in the World
+                                <p>PavelskiBH</p>
+                                <span>185K views • 7 days ago</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="card card2">
+                        <div class="link card2Link">
+                            <a href="https://www.youtube.com/watch?v=aJ2nRNyftnI">
+                                <img src="./images/vid2.jpg" alt="SecondVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card2Details">
+                            <a href="https://www.youtube.com/@Tujh91">
+                                <img src="./images/vid2pfp.jpg" alt="Volleyball">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=aJ2nRNyftnI">VOLLEYBALL FIRST PERSON | Best game 2022
+                                <p>Egor Pupinni</p>
+                                <span>1.9M views • 1 year ago</span>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="card card3">
+                        <div class="link card3Link">
+                            <a href="https://www.youtube.com/watch?v=CjIoTcs0ayg&pp=ygUiU2FuZHN0b3JtIHZzIEJvb21pZSAtIEdyYW5kIEZpbmFscw%3D%3D">
+                                <img src="./images/vid3.jpg" alt="ThirdVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card3Details">
+                            <a href="https://www.youtube.com/@Brawlhalla">
+                                <img src="./images/vid3pfp.jpg" alt="Brawlhalla">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=CjIoTcs0ayg&pp=ygUiU2FuZHN0b3JtIHZzIEJvb21pZSAtIEdyYW5kIEZpbmFscw%3D%3D">Sandstorm vs Boomie - Grand Finals
+                                <p>Brawlhalla</p>
+                                <span>1.2M views • 2 years ago</span>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="card card4">
+                        <div class="link card4Link">
+                            <a href="https://www.youtube.com/watch?v=nw4BE9KdUm8&pp=ygUoUmVzcG9uc2l2ZSBQYWdlIExheW91dCBVc2luZyBDU1MgRmxleGJveA%3D%3D">
+                                <img src="./images/vid4.jpg" alt="FourthVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card4Details">
+                            <a href="https://www.youtube.com/@CodingMasterYt">
+                                <img src="./images/vid4pfp.jpg" alt="CSS">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=nw4BE9KdUm8&pp=ygUoUmVzcG9uc2l2ZSBQYWdlIExheW91dCBVc2luZyBDU1MgRmxleGJveA%3D%3D">Responsive Page Layout Using CSS Flexbox
+                                <p>Coding Master</p>
+                                <span>16K views • 2 years ago</span>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="card card5">
+                        <div class="link card5Link">
+                            <a href="https://www.youtube.com/watch?v=SgmNxE9lWcY&t=195s&pp=ygUyTGVhcm4gQ1NTIEFuaW1hdGlvbnMgSW4gMjAgTWludXRlcyAtIEZvciBCZWdpbm5lcnM%3D">
+                                <img src="./images/vid5.jpg" alt="FifthVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card5Details">
+                            <a href="https://www.youtube.com/@slayingthedragon">
+                                <img src="./images/vid5pfp.jpg" alt="CSS">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=SgmNxE9lWcY&t=195s&pp=ygUyTGVhcm4gQ1NTIEFuaW1hdGlvbnMgSW4gMjAgTWludXRlcyAtIEZvciBCZWdpbm5lcnM%3D">Learn CSS Animations In 20 Minutes - For Beginners
+                                <p>Slaying The Dragon</p>
+                                <span>802K views • 1 year ago</span>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="card card6">
+                        <div class="link card6Link">
+                            <a href="https://www.youtube.com/watch?v=bq6_L6sFQ0k&t=1s&pp=ygUeQkxFTkRFUiAxIERBWSBTQ1VMUFQgVElNRUxBUFNF">
+                                <img src="./images/vid6.jpg" alt="SixthVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card6Details">
+                            <a href="https://www.youtube.com/@OJOSTUDIO666">
+                                <img src="./images/vid6pfp.jpg" alt="BlenderModeling">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=bq6_L6sFQ0k&t=1s&pp=ygUeQkxFTkRFUiAxIERBWSBTQ1VMUFQgVElNRUxBUFNF">BLENDER 1 DAY SCULPT TIMELAPSE
+                                <p>OJO STUDIO</p>
+                                <span>556K views • 9 months ago</span>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="card card7">
+                        <div class="link card7Link">
+                            <a href="https://www.youtube.com/watch?v=_koqmYqoH6g&t=2s&pp=ygUcQ29udmVydCAuRVhFIHRvIFNvdXJjZSBDb2RlIQ%3D%3D">
+                                <img src="./images/vid7.jpg" alt="SeventhVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card7Details">
+                            <a href="https://www.youtube.com/@ebolaman_">
+                                <img src="./images/vid7pfp.jpg" alt="Hacking">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=_koqmYqoH6g&t=2s&pp=ygUcQ29udmVydCAuRVhFIHRvIFNvdXJjZSBDb2RlIQ%3D%3D">Convert .EXE to Source Code!
+                                <p>ebola man</p>
+                                <span>45K views • 8 days ago</span>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="card card8">
+                        <div class="link card8Link">
+                            <a href="https://www.youtube.com/watch?v=dZwbb42pdtg">
+                                <img src="./images/vid8.jpg" alt="SeventhVideo">
+                            </a>
+
+                        </div>
+
+                        <div class="details card8Details">
+                            <a href="https://www.youtube.com/@NetworkChuck">
+                                <img src="./images/vid8pfp.jpg" alt="Hacking">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=dZwbb42pdtg">3 Levels of WiFi Hacking
+                                <p>NetworkChuck</p>
+                                <span>938K views • 1 month ago</span>
+                            </a>
+
+                        </div>
+                        
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="leftBar">
+                <div class="leftBarFlexBox">
+                    <div class="leftBarBefore">
+                        <div class="leftBarHome">
+                            <a><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+                            <p>Home</p>
+                        </div>
+
+                        <div class="leftBarHome">
+                            <a><i class="fa-solid fa-film"></i></a>
+                            <p>Shorts</p>
+                        </div>
+
+                        <div class="leftBarHome">
+                            <a><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                            <p>Subscriptions</p>
+                        </div>
+
+                        <div class="leftBarHome">
+                            <a><i class="fa-regular fa-circle-play" style="color: #ffffff;"></i></a>
+                            <p>You</p>
+                        </div>
+                    </div>
+
+                    <div class="leftBarAfter">
+                        <div class="leftBarAfterFlex">
+                            <div class="leftBarFirstBox leftBarBoxes">
+                                <div class="leftBarFirstIcon leftBarIcons">
+                                    <a><i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+                                    <p>Home</p>
+                                </div>
+
+                                <div class="leftBarSecondIcon leftBarIcons">
+                                    <a><i class="fa-solid fa-film"></i></a>
+                                    <p>Shorts</p>
+                                </div>
+
+                                <div class="leftBarThirdIcon leftBarIcons">
+                                    <a><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a>
+                                    <p>Subscriptions</p>
+                                </div>
+                            </div>
+
+                            <div class="leftBarSecondBox leftBarBoxes">
+                                <div class="leftBarFirstTitle leftBarTitles">
+                                    <p>You</p>
+                                </div>
+
+                                <div class="leftBarFourtIcon leftBarIcons">
+                                    <a><i class="fa-regular fa-circle-user" style="color: #ffffff;"></i></a>
+                                    <p>Your channel</p>
+                                </div>
+
+                                <div class="leftBarFifthIcon leftBarIcons">
+                                    <a><i class="fa-solid fa-circle-play" style="color: #ffffff;"></i></a>
+                                    <p>Your videos</p>
+                                </div>
+
+                                <div class="leftBarSixthIcon leftBarIcons">
+                                    <a><i class="fa-regular fa-clock" style="color: #ffffff;"></i></a>
+                                    <p>Watch later</p>
+                                </div>
+
+                                <div class="leftBarSeventhIcon leftBarIcons">
+                                    <a><i class="fa-regular fa-thumbs-up" style="color: #ffffff;"></i></a>
+                                    <p>Liked videos</p>
+                                </div>
+                            </div>
+
+                            <div class="leftBarThirdBox leftBarBoxes">
+                                <div class="leftBarSecondTitle leftBarTitles">
+                                    <p>Subscriptions</p>
+                                </div>
+
+                                <div class="leftBarEighthIcon leftBarIcons">
+                                    <img src="./images/corgi.jpg" alt="corgi" width="24px" height="24px" style="border-radius: 50px;">
+                                    <p>Corgi</p>
+                                </div>
+
+                                <div class="leftBarNinethIcon leftBarIcons">
+                                    <img src="./images/vuuk.jpg" alt="Vuuk" width="24px" height="24px" style="border-radius: 50px;">
+                                    <p>Vuuk Studios</p>
+                                </div>
+
+                                <div class="leftBarTenthIcon leftBarIcons">
+                                    <img src="./images/asa.jpg" alt="Asa" width="24px" height="24px" style="border-radius: 50px;">
+                                    <p>Asadrith</p>
+                                </div>
+
+                                <div class="leftBarEleventhIcon leftBarIcons">
+                                    <a><i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i></a>
+                                    <p>Browse channels</p>
+                                </div>
+                            </div>
+
+                            <div class="leftBarFourthBox leftBarBoxes">
+                                <div class="leftBarThirdTitle leftBarTitles">
+                                    <p>Explore</p>
+                                </div>
+
+                                <div class="ExploreFirst leftBarIcons">
+                                    <a><i class="fa-brands fa-gripfire" style="color: #ffffff;"></i></a>
+                                    <p>Trending</p>
+                                </div>
+
+                                <div class="ExploreSecond leftBarIcons">
+                                    <a><i class="fa-solid fa-music" style="color: #ffffff;"></i></a>
+                                    <p>Music</p>
+                                </div>
+
+                                <div class="ExploreThird leftBarIcons">
+                                    <a><i class="fa-solid fa-clapperboard" style="color: #ffffff;"></i></a>
+                                    <p>Movies</p>
+                                </div>
+
+                                <div class="ExploreFourth leftBarIcons">
+                                    <a><i class="fa-solid fa-headset" style="color: #ffffff;"></i></a>
+                                    <p>Live</p>
+                                </div>
+
+                                <div class="ExploreFifth leftBarIcons">
+                                    <a><i class="fa-solid fa-gamepad" style="color: #ffffff;"></i></a>
+                                    <p>Gaming</p>
+                                </div>
+
+                                <div class="ExploreSixth leftBarIcons">
+                                    <a><i class="fa-regular fa-newspaper" style="color: #ffffff;"></i></a>
+                                    <p>News</p>
+                                </div>
+
+                                <div class="ExploreSeventh leftBarIcons">
+                                    <a><i class="fa-solid fa-medal" style="color: #ffffff;"></i></a>
+                                    <p>Sports</p>
+                                </div>
+
+                                <div class="ExploreEighth leftBarIcons">
+                                    <a><i class="fa-solid fa-podcast" style="color: #ffffff;"></i></a>
+                                    <p>Podcasts</p>
+                                </div>
+                            </div>
+
+                            <div class="leftBarFifthBox leftBarBoxes">
+                                <div class="leftBarThirdTitle leftBarTitles">
+                                    <p>More from YouTube</p>
+                                </div>
+
+                                <div class="YouTubeOffer leftBarIcons">
+                                    <img src="./images/Youtube_logo.png" style="position: relative; left: 2px;" alt="youtube premium" width="22px" height="16px">
+                                    <p>YouTube Premium</p>
+                                </div>
+
+                                <div class="YouTubeOffer leftBarIcons">
+                                    <img src="./images/ytStudio.png" alt="youtube premium" width="24px" height="24px">
+                                    <p>YouTube Studio</p>
+                                </div>
+
+                                <div class="YouTubeOffer leftBarIcons">
+                                    <img src="./images/ytMusic.png" alt="youtube premium" width="27px" height="26px">
+                                    <p>YouTube Music</p>
+                                </div>
+
+                                <div class="YouTubeOffer leftBarIcons">
+                                    <img src="./images/ytKids.png" style="position: relative; left: 3px;" alt="youtube premium" width="24px" height="24px">
+                                    <p>YouTube Kids</p>
+                                </div>
+                            </div>
+
+                            <div class="leftBarSixthBox leftBarBoxes">
+                                <div class="ExploreFifth leftBarIcons">
+                                    <a><i class="fa-solid fa-gear"></i></a>
+                                    <p>Settings</p>
+                                </div>
+
+                                <div class="ExploreFifth leftBarIcons">
+                                    <a><i class="fa-regular fa-flag" style="color: #ffffff;"></i></a>
+                                    <p>Report history</p>
+                                </div>
+
+                                <div class="ExploreFifth leftBarIcons">
+                                    <a><i class="fa-solid fa-circle-question" style="color: #ffffff;"></i></a>
+                                    <p>Help</p>
+                                </div>
+
+                                <div class="ExploreFifth leftBarIcons">
+                                    <a><i class="fa-solid fa-triangle-exclamation" style="color: #ffffff;"></i></a>
+                                    <p>Send feedback</p>
+                                </div>
+                            </div>
+
+                            <div class="leftBarSeventhBox leftBarBoxes">
+                                <div style="background-color: transparent; gap: 10px;" class="LastLinks leftBarIcons">
+                                    <a href="#">About</a>
+                                    <a href="#">Press</a>
+                                    <a href="#">Copyright</a>
+                                </div>
+
+                                <div style="background-color: transparent;" class="LastLinks leftBarIcons">
+                                    <a href="#">Contact us</a>
+                                    <a href="#">Creators</a>
+                                </div>
+
+                                <div style="background-color: transparent;" class="LastLinks leftBarIcons">
+                                    <a href="#">Advertise</a>
+                                    <a href="#">Developers</a>
+                                </div>
+
+                                <div style="background-color: transparent; gap: 10px; margin-top: 10px;" class="LastLinks leftBarIcons">
+                                    <a href="#">Terms</a>
+                                    <a href="#">Privacy</a>
+                                    <a href="#">Policy & Safety</a>
+                                </div>
+
+                                <div style="background-color: transparent;" class="LastLinks leftBarIcons">
+                                    <a href="#">How  YouTube  works</a>
+                                </div>
+
+                                <div style="background-color: transparent;" class="LastLinks leftBarIcons">
+                                    <a href="#">Test new features</a>
+                                </div>
+
+                                <p style="position: relative; left: 10px; font-size: 12px; color: rgb(78, 78, 78);">© 2024 Google LLC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>

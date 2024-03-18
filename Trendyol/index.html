@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0ae4ab847d.js" crossorigin="anonymous"></script>
+    <title>Trendyol</title>
+</head>
+<body>
+    <div class="Trendyol">
+        <div class="minusBar">
+            <a href="#" style="text-decoration: none;position: relative; right: 50px; color: rgb(87, 87, 87); font-size: 12px; font-family: lato;">Join our Influencer Program</a>
+            <div class="minusBarEnd">
+                <a href="#" style="text-decoration: none;position: relative; right: 10px; color: rgb(87, 87, 87); font-family: lato;">PL</a>
+                <img class="flag" src="./images/pl.svg" style="position: relative; right: 5px; cursor: pointer; top: 0px;" alt="PL" width="20px"  height="20px">
+                <div class="flagHover">
+                    <div class="flagHoverFlex">
+        
+                        <div class="deliverTo">
+                            <p style="font-size: 12px;">DELIVER TO</p>
+                            <li>Poland</li>
+                        </div>
+                        
+                        <div class="language">
+                            <input style="cursor: pointer;" type="radio" name="language" value="Polski" id="Polski">
+                            <label style="cursor: pointer;" for="Polski">Polski</label>
+                            <input style="cursor: pointer;" type="radio" name="language" value="English" id="English">
+                            <label style="cursor: pointer;" for="English">English</label>
+                        </div>
+                        
+                        <button id="save">Save</button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div class="topBar">
+            <div class="topBarFlex">
+                <div class="Logo">
+                    <h1 style="font-family: PoppinsReg; font-weight: 600; font-size: 31px; color: var(--IconsColor);">trendyol</h1>
+                </div>
+
+                <div class="searchBox">
+                    <input class="searchTab" onblur="makeBorderBack()" onfocus="makeBorderOrange()" name="search" type="text" placeholder="Search for category, item or brand">
+                    <a><i class="fa-solid fa-magnifying-glass" style="color: #f27a1a;"></i></a>
+                </div>
+
+                <div class="rightTopIcons">
+                    <nav>
+                        <ul>
+                            <li class="topBarIcons">
+                                <a><i class="fa-solid fa-headset"></i></a>
+                                <div class="dropDown">
+                                    <a><i style="color: var(--IconsColor);" class="fa-solid fa-arrow-rotate-left"></i>Shipping & Returns</a>
+                                    <a><i style="color: var(--IconsColor);" class="fa-regular fa-circle-question"></i>Help Center</a>
+                                </div>
+                            </li>
+
+                            <li class="topBarIcons">
+                                <a><i class="fa-regular fa-user"></i></a>
+                                <div style="right: -10px;" class="dropDown dropDown2">
+                                    <button>LOG IN</button>
+                                    <button>SIGN UP</button>
+                                </div>
+                            </li>
+
+                            <li class="topBarIcons">
+                                <a><i class="fa-regular fa-heart"></i></a>
+                            </li>
+
+                            <li class="topBarIcons">
+                                <a><i class="fa-solid fa-bag-shopping"></i></a>
+                                <div style="right: 0px;" class="dropDown dropDown4">
+                                    <p style="font-family: PoppinsMed; color: black; font-size: 12px;">Your bag is empty.</p>
+                                    <p style="font-family: PoppinsReg; color: rgb(155, 155, 155); font-size: 12px;" >See the latest fashion trends and add your favorites to your bag</p>
+                                    <button>DISCOVER WHAT'S NEW</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="advertise">
+            <div class="women">
+                <p>Women</p>
+                <div class="womenHover">
+                    <div class="list">
+                        <div class="leftList">
+                            <div class="list1 leftListChilds">
+                                <a>New in</a>
+                            </div>
+                            <div class="list2 leftListChilds">
+                                <a>Clothing</a>
+                            </div>
+                            <div class="list3 leftListChilds">
+                                <a>Dresses</a>
+                                <div class="DressesCategory">
+                                    <p>Party Dresses</p>
+                                    <p>Casual Dresses</p>
+                                    <p>Maxi Dresses</p>
+                                    <p>Midi Dresses</p>
+                                    <p>Mini Dresses</p>
+                                </div>
+                            </div>
+                            <div class="list4 leftListChilds">
+                                <a>Tops</a>
+                                <div class="TopsCategory">
+                                    <p>T-Shirts</p>
+                                    <p>Blouses & Shirts</p>
+                                    <p>Tops & Shirts</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="rightList">
+                            <div class="list1 rightListChilds">
+                                <a>Pants & Jeans</a>
+                                <div class="pantsCategory">
+                                    <p>Pants</p>
+                                    <p>Cargo Pants</p>
+                                    <p>Leathe Pants</p>
+                                    <p>Business Pants</p>
+                                </div>
+                            </div>
+                            <div class="list2 rightListChilds">
+                                <a>Shoes & Accessories</a>
+                                <div class="shoesCategory">
+                                    <p>Sport Shoes</p>
+                                    <p>Low Shoes</p>
+                                </div>
+                            </div>
+                            <div class="list3 rightListChilds">
+                                <a>Sportswear</a>
+                                <div class="sportCategory">
+                                    <p>Sport Leggings</p>
+                                    <p>Sport T-Shirts</p>
+                                    <p>Sports Bras</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pics">
+                        <div class="pic1 top3Pics">
+                            <img src="images/topGirl1.webp" alt="topGirl1" width="204px" height="395px">
+                        </div>
+                        
+                        <div class="pic2 top3Pics">
+                            <img src="images/topGirl2.webp" alt="topGirl2" width="204px" height="395px">
+                        </div>
+
+                        <div class="pic3 top3Pics">
+                            <img src="images/topGirl3.webp" alt="topGirl3" width="204px" height="395px">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="men">
+                <p>Men</p>
+                <div class="menHover">
+                    <div class="list">
+                        <div class="leftList">
+                            <div class="list1 leftListChilds">
+                                <a>New in</a>
+                            </div>
+                            <div class="list2 leftListChilds">
+                                <a>Clothing</a>
+                            </div>
+                            <div class="list4 leftListChilds">
+                                <a>Tops</a>
+                                <div class="TopsCategory">
+                                    <p>T-Shirts</p>
+                                    <p>Denim Jackets</p>
+                                    <p>Sweaters & Cardigans</p>
+                                    <p>Sweatshirts & Hoodies</p>
+                                    <p>Polo Shirts</p>
+                                    <p>Tops & Shirts</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="rightList">
+                            <div class="list1 rightListChilds">
+                                <a>Pants & Jeans</a>
+                                <div class="pantsCategory">
+                                    <p>Shorts & Bermudas</p>
+                                    <p>Sweatpants</p>
+                                    <p>Pants</p>
+                                    <p>Cargo Pants</p>
+                                    <p>Leather Pants</p>
+                                    <p>Business Pants</p>
+                                </div>
+                            </div>
+                            <div class="list2 rightListChilds">
+                                <a>Shoes & Accessories</a>
+                                <div class="shoesCategory">
+                                    <p>Socks</p>
+                                    <p>Sunglasses</p>
+                                    <p>Boots</p>
+                                    <p>Sneakers</p>
+                                    <p>Low Shoes</p>
+                                    <p>Sport Shoes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pics">
+                        <div class="pic1 top3Pics">
+                            <img src="images/topMan1.webp" alt="topMan1" width="204px" height="395px">
+                        </div>
+                        
+                        <div class="pic2 top3Pics">
+                            <img src="images/topMan2.webp" alt="topMan2" width="204px" height="395px">
+                        </div>
+
+                        <div class="pic3 top3Pics">
+                            <img src="images/topMan3.webp" alt="topMan3" width="204px" height="395px">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="bottom">
+            <div class="bottom-flexBox">
+                
+                <div class="ads">
+                    <div class="top-ad">
+                        <img src="./images/ad1.webp" alt="FREE SHIPPING" width="1395px">
+                    </div>
+
+                    <div class="bottom-ad">
+                        <img src="images/ad2.webp" alt="ADVERTISEMENT" width="1395px">
+                    </div>
+                </div>
+
+
+                <div class="dailyOffers">
+                    <div class="dailyOffersFlex">
+                        <div class="dailyOffersTitle">
+                            <div class="title">
+                                Daily Offers
+                            </div>
+
+                        </div>
+
+                        <div class="dailyOffersProducts">
+
+
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="flashSale">
+
+
+                </div>
+
+                <div class="shopBy"> <!--Shopy By Category and Shop by brand-->
+
+                
+                </div>
+
+                <div class="bottomBar">
+                
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+
+</html>

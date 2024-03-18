@@ -1,0 +1,1195 @@
+:root {
+    --background: rgba(230, 234, 240, 0.589);
+    --grayFont: #65676B;
+}
+
+* {
+    font-family: lato;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--background);
+}
+
+
+@font-face {
+    font-family: lato;
+    src: url(./fonts/Lato.ttf);
+}
+
+@font-face {
+    font-family: PoppinsMed;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsReg;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowReg;
+    src: url(./fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowMed;
+    src: url(./fonts/Barlow-Medium.ttf);
+}
+
+
+.FaceBookPage1 {
+    margin: 0;
+}
+
+.top_Bar {
+    background-color: white;
+    display: grid;
+    align-items: center;
+    position: fixed;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: space-around;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0px 1px 5px rgba(153, 153, 153, 0.584);
+    z-index: 0;
+}
+
+.top_Bar_Search {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: center;
+}
+
+.top_Bar_Nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_Bar_Control {
+    display: flex;
+    position: relative;
+    justify-content: right;
+    align-items: center;
+}
+
+.Search{
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    left: 25px;
+    width: 240px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgba(230, 234, 240, 0.589);
+}
+
+.GridBoxNav {
+    display: grid;
+    position: relative;
+    text-align: center;
+    grid-template-columns: repeat(4, 100px);
+    gap: 20px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.FourIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.FourIcons > a {
+    position: relative;
+    font-size: 30px;
+}
+
+
+.shadowHolder {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    opacity: 0;
+    top: 57px;
+    font-size: 12px;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    z-index: 4;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.742);
+    padding: 0px 10px;
+    transition: all 0.3s ease;
+}
+
+.FourIcons:hover .shadowHolder{
+    opacity: 1;
+    display: flex;
+}
+
+.FourIcons:hover {
+    background-color: rgba(108, 108, 108, 0.155);
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.FlexBoxNav {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: row;
+    gap: 10px;
+    right: 15px;
+}
+
+.FourControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+    background-color: rgba(230, 234, 240, 0.589);
+    width: 40px;
+    border-radius: 50px;
+    transition: all .3s ease;
+}
+
+.FourControl > a {
+    position: relative;
+    font-size: 20px;
+}
+
+.FourControl:hover .shadowHolder {
+    opacity: 1;
+    transition: all .3s ease;
+    display: flex;
+    transition-delay: .1s;
+}
+
+.FourControl:hover {
+    background-color: rgba(194, 196, 199, 0.589);
+    
+}
+
+.activeTopPanels {
+    border-bottom: 3px solid blue;
+}
+
+.activeTopButtons {
+    color: rgb(0, 115, 255);
+}
+
+.slideProfile {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    top: 50px;
+    right: 20px;
+    border-radius: 10px;
+    position: absolute;
+    float: right;
+    gap: 20px;
+    background-color: white;
+    overflow: hidden;
+    width: 320px;
+    height: 420px;
+    padding: 15px 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.389);
+    z-index: 3;
+}
+
+.slideNotify {
+    display: none;
+    flex-direction: column;
+    top: 50px;
+    right: 20px;
+    opacity: 0;
+    border-radius: 10px;
+    position: absolute;
+    float: right;
+    gap: 0px;
+    background-color: white;
+    overflow: hidden;
+    width: 320px;
+    height: 250px;
+    padding: 15px 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.389);
+    z-index: 3;
+}
+
+.Profile {
+    display: flex;
+    position: relative;
+    top: 0;
+    z-index: 4;
+    width: 320px;
+    height: 115px;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.389);
+    gap: 10px;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.UserName {
+    position: relative;
+    left: 60px;
+    top: -19px;
+    display: block;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+
+.currentProfile {
+    position: relative;
+    width: 310px;
+    left: 4px;
+    top: 5px;
+    border-radius: 10px;
+}
+
+.currentProfile > img {
+    top: 13px;
+}
+
+.currentProfile:hover {
+    background-color: rgba(230, 234, 240, 0.589);
+}
+
+.menuSelection {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.menuTabIcons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 3px 1px;
+    margin: 0;
+}
+
+.menuTabIcons:hover {
+    background-color: rgba(230, 234, 240, 0.589);
+    border-radius: 10px;
+}
+
+.FiveIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+    background-color: rgba(230, 234, 240, 0.589);
+    width: 40px;
+    border-radius: 50px;
+}
+
+.FiveIcons > a {
+    font-size: 20px;
+}
+
+.rightArrow {
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+}
+
+
+.leftTab {
+    width: 350px;
+    height: 100vh;
+    top: 56px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: fixed;
+    box-sizing: border-box;
+    font-weight: 500;
+    z-index: 6;
+}
+
+.middlePart {
+    height: 100vh;
+    width: 100%;
+    top: 56px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.middlePartFlex {
+    top: 40px;
+    position: relative;
+    width: 700px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+.storyTab {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(5, 140px);
+    position: relative;
+    gap: 10px;
+    height: 250px;
+    width: 700px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.storyCard {
+    width: 140px;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.storyCard img:nth-child(1) {
+    width: 149.40px;
+    left: 0.5px;
+    height: 250px;
+    border-radius: 15px;
+    z-index: 2;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.storyCard img:nth-child(2) {
+    width: 45px;
+    left: 5px;
+    height: 45px;
+    top: -240px;
+    border-radius: 50px;
+    border: 4px solid rgb(0, 89, 255);
+    z-index: 3;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.storyCard p {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.story1 {
+    display: block;
+}
+
+.story2 {
+    display: block;
+}
+
+.story3 {
+    display: block;
+}
+
+.story4 {
+    display: block;
+}
+
+.story5 {
+    display: block;
+}
+
+.yourStory::before {
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    z-index: 3;
+    transform-origin: bottom;
+}
+
+.yourPostTab {
+    width: 590px;
+    height: 122px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 5px rgba(153, 153, 153, 0.584);
+}
+
+.postTopic {
+    position: relative;
+    top: -5px;
+    left: 20px;
+    width: 550px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    padding-bottom: 15px;
+}
+
+.postIcons {
+    left: 20px;
+    width: 600px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    top: 10px;
+}
+
+.postIcon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    top: -5px;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.postIcon:hover {
+    background-color: rgba(230, 234, 240, 0.589);;
+}
+
+.postIcon p {
+    display: inline;
+    position: relative;
+    left: 5px;
+    top: 0px;
+    font-family: BarlowMed;
+    color: var(--grayFont);
+}
+
+.postIcon img {
+    position: relative;
+    top: 7px;
+}
+
+.plus {
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    top: -100px;
+    left: 45px;
+    border: 5px solid white;
+    display: block;
+    border-radius: 50px;
+    background-color: rgb(0, 115, 255);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.leftTabFlex {
+    top: 10px;
+    left: 10px;
+    width: 335px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.leftTab::-webkit-scrollbar {
+    position: relative;
+    width: 9px;
+    height: 40px;
+}
+
+.leftTab::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba(125, 125, 125, 0.396);
+}
+
+.rightTab {
+    width: 300px;
+    height: 100vh;
+    top: 56px;
+    position: fixed;
+    right: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: fixed;
+    box-sizing: border-box;
+    font-weight: 500;
+    z-index: 2;
+}
+
+
+.rightTabFlex {
+    top: 10px;
+    left: 10px;
+    width: 335px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.rightTab::-webkit-scrollbar {
+    position: relative;
+    width: 9px;
+    height: 40px;
+}
+
+.rightTab::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba(125, 125, 125, 0.396);
+}
+
+.rightTabFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.contacts  p {
+    display: inline-block;
+    position: relative;
+    font-family: PoppinsMed;
+    color: var(--grayFont);
+}
+
+.icons {
+    position: relative;
+    right: 30px;
+    display: flex;
+    gap: 25px;
+}
+
+.icons > a {
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 7px;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.icons > a:hover {
+    background-color: #65676b1c;
+    
+}
+
+.people {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 320px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-inline-start: 5px;
+}
+
+.card:hover {
+    background-color: rgba(159, 159, 159, 0.132);
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 10px;
+}
+
+.card img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    left: -8px;
+}
+
+.status span:nth-child(1) {
+    color: #31a24c;
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+}
+
+.status span:nth-child(2) {
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    left: -11.60px;
+    top: -0.40px;
+    z-index: 2;
+}
+
+
+.icon-1Text {
+    position: relative;
+    left: 50px;
+    top: -22px;
+    display: block;
+    font-family: PoppinsMed;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.profileIcon1, .left-tab-icons {
+    position: relative;
+    width: 330px;
+    left: -5px;
+    height: 53px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.left-tab-icons:hover {
+    background-color: rgba(159, 159, 159, 0.132);
+}
+
+.firstPart {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.firstPartCard {
+    cursor: pointer;
+}
+
+.secondPart {
+    top: -12px;
+    position: relative;
+}
+
+.hiddenIcons {
+    display: none;
+}
+
+
+.notify1 {
+    position: relative;
+    top: -15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    font-family: BarrowMed;
+}
+
+.notify2 {
+    position: relative;
+    top: -10px;
+}
+
+.menuTabIcons:hover {
+    transition: all .3s ease;
+}
+
+.notifyButtons {
+    border-radius: 15px;
+    outline: none;
+    border: transparent;
+    height: 35px;
+    padding-inline: 10px;
+    overflow: hidden;
+    font-size: 18px;
+    background-color: transparent;
+    top: 0;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.notifyButton1:hover {
+    background-color: rgba(188, 188, 188, 0.197);
+}
+
+.notifyButton2:hover {
+    background-color: rgba(188, 188, 188, 0.197);
+}
+
+.activeButton {
+    color: rgb(0, 115, 255);
+    background-color: rgba(164, 193, 255, 0.236);
+}
+
+.activeButton:hover {
+    background-color: rgba(164, 193, 255, 0.529);
+}
+
+.btn {
+    color: var(--grayFont);
+}
+
+
+
+#logo {
+    top: -7px;
+    position: relative;
+    left: 15px;
+    margin: 0;
+    transition: all .1s;
+}
+
+#logo i{
+    padding-top: 15px;
+    font-size: 38px;
+    position: relative;
+    display: inline-block;
+}
+
+#searchBar {
+    border: none;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    background-color: transparent;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    left: 10px;
+    outline: none;
+}
+
+#newPost {
+    border: none;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    background-color: var(--background);
+    padding: 20px;
+    width: 500px;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    left: 5px;
+    outline: none;
+    transition: all ease .3s;
+}
+
+#newPost:hover {
+    background-color: rgba(108, 108, 108, 0.155);
+}
+
+#searchBarIcon {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    transition: all .1s ease;
+}
+
+#arrow {
+    position: fixed;
+    display: inline-block;
+    opacity: 0;
+    left: 40px;
+    transition: all .1s ease;
+    font-size: 20px;
+    color: rgb(108, 108, 108);
+    margin: 0;
+    cursor: pointer;
+}
+
+#HomeIcon {
+    font-size: 20px;
+}
+
+#FriendsIcon {
+    font-size: 20px;
+}
+
+#VideoIcon {
+    font-size: 20px;
+}
+
+#GroupsIcon {
+    font-size: 20px;
+}
+
+#AccountIcon {
+    top: 2px;
+}
+
+#AccountIcon2 {
+    position: relative;
+    left: 10px;
+    top: 13px;
+    display: block;
+    font-weight: 500;
+}
+
+#AccountIcon3 {
+    top: 15px;
+    position: relative;
+    left: 0px;
+}
+
+#notifyMenu {
+    display: inline-block;
+    position: relative;
+}
+
+#scrollStoryLeft {
+    left: 10px;
+    transform: rotate(90deg);
+    cursor: pointer; 
+    position: absolute; 
+    z-index: 6; 
+    top: 100px;
+}
+
+#scrollStoryRight {
+    transform: rotate(-90deg); 
+    cursor: pointer; 
+    position: relative; 
+    z-index: 6; 
+    top: -150px; 
+    right: -300px;
+}
+
+#searchBox {
+    width: 240px;
+}
+
+@media screen and (max-width:300px) {
+    .leftTab {
+        display: none;
+    }
+    .middlePartFlex {
+        align-items: start;
+    }
+    #searchBox {
+        display: none;
+    }
+    #newPost {
+        width: 150px;
+    }
+    .storyTab {
+        width: 260px;
+    }
+    .middlePartFlex {
+        align-items: center;
+    }
+    .yourPostTab {
+        width: 250px;
+    }
+    .postTopic {
+        width: 200px;
+    }
+    .postIcons {
+        width: 250px;
+    }
+    .postIcon {
+        width: 50px;
+    }
+    #scrollStoryLeft {
+        left: 0px;
+    }
+    #scrollStoryRight {
+        left: 120px;
+    }
+}
+
+@media screen and (min-width: 301px) and (max-width: 480px) {
+    .leftTab {
+        display: none;
+    }
+    .middlePartFlex {
+        align-items: start;
+    }
+    #searchBox {
+        display: none;
+    }
+    #newPost {
+        width: 150px;
+    }
+    .storyTab {
+        width: 260px;
+    }
+    .middlePartFlex {
+        align-items: center;
+    }
+    .yourPostTab {
+        width: 250px;
+    }
+    .postTopic {
+        width: 200px;
+    }
+    .postIcons {
+        width: 250px;
+    }
+    .postIcon {
+        width: 50px;
+    }
+    #scrollStoryLeft {
+        left: 80px;
+    }
+    #scrollStoryRight {
+        left: 120px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 520px) {
+    .leftTab {
+        display: none;
+    }
+    .middlePartFlex {
+        align-items: start;
+    }
+
+    .storyTab {
+        width: 460px;
+    }
+    .yourPostTab {
+        width: 450px;
+    }
+    .postTopic {
+        width: 400px;
+    }
+    .postIcons {
+        width: 300px;
+    }
+    #newPost {
+        width: 350px;
+    }
+
+    #scrollStoryLeft {
+        left: 10px;
+    }
+    #scrollStoryRight {
+        left: 420px;
+    }
+    #searchBox {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 930px) {
+    .rightTab {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .GridBoxNav {
+        display: none;
+    }
+    .postIcon p {
+        display: none;
+    }
+
+    #searchBar {
+        font-size: 16px;
+        width: 50px;
+    }
+
+    #searchBox {
+        width: 50px;
+    }
+}
+
+@media screen and (min-width: 521px) and (max-width: 1100px) {
+    .leftTab {
+        display: none;
+    }
+    .middlePartFlex {
+        align-items: start;
+    }
+
+    .storyTab {
+        width: 500px;
+    }
+    .yourPostTab {
+        width: 490px;
+    }
+    .postTopic {
+        width: 460px;
+    }
+    .postIcons {
+        width: 300px;
+    }
+
+
+    #newPost {
+        width: 400px;
+    }
+
+    #scrollStoryLeft {
+        left: 10px;
+    }
+    #scrollStoryRight {
+        left: 420px;
+    }
+
+    /* .storyTab {
+        width: 250px;
+    }
+    .yourPostTab {
+        width: 390px;
+    }
+    .postTopic {
+        width: 360px;
+    }
+    .postIcons {
+        width: 100px;
+    }
+
+    .postIcon {
+        width: 120px;
+    }
+
+    .postIcon p {
+        display: none;
+    }
+
+    #searchBar {
+        width: 100px;
+    }
+
+    #searchBox {
+        width: 200px;
+    }
+
+    #newPost {
+        width: 300px;
+    }
+
+    #scrollStoryLeft {
+        left: 230px;
+    }
+    #scrollStoryRight {
+        left: 90px;
+    } */
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    #searchBox {
+        width: 150px;
+    }
+
+    #searchBar {
+        width:100px;
+    }
+
+    .GridBoxNav {
+        grid-template-columns: repeat(4, 50px);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .rightTab {
+        width: 350px;
+    }
+
+    .contacts {
+        width: 335px;
+    }
+}
+
+@media screen and (min-width:1101px) and (max-width: 1300px) {
+    .storyTab {
+        width: 500px;
+    }
+    .yourPostTab {
+        width: 490px;
+    }
+    .postTopic {
+        width: 460px;
+    }
+    .postIcons {
+        width: 300px;
+    }
+
+    #searchBar {
+        width: 100px;
+    }
+
+    #searchBox {
+        width: 200px;
+    }
+
+
+    #newPost {
+        width: 400px;
+    }
+
+    #scrollStoryLeft {
+        left: 110px;
+    }
+    #scrollStoryRight {
+        left: 190px;
+    }
+
+}

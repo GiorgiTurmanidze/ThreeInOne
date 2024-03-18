@@ -1,0 +1,531 @@
+:root {
+    --grayOutline: rgba(176, 176, 176, 0.442);
+    --IconsColor: #333333;
+    --orangeButtons: #F38730;
+}
+
+@font-face {
+    font-family: lato;
+    src: url(./fonts/Lato.ttf);
+}
+
+@font-face {
+    font-family: PoppinsMed;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsReg;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowReg;
+    src: url(./fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: BarlowMed;
+    src: url(./fonts/Barlow-Medium.ttf);
+}
+
+
+body {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.Trendyol {
+    margin: 0;
+    font-family: PoppinsReg;
+}
+
+.minusBar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    right: 150px;
+    height: 40px;
+    padding: 0px 10px;
+}
+
+.minusBarEnd {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.minusBarEnd:hover  .flagHover{
+    display: flex;
+}
+
+.flagHover:hover {
+    display: flex;
+}
+
+@keyframes moveDown {
+    0% {
+    
+    }
+
+    100% {
+        top: 40px;
+    }
+}
+
+.flagHover {
+    font-family: PoppinsMed;
+    list-style: none;
+    width: 260px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid #e6e6e6;
+    border-top: none;
+    box-sizing: border-box;
+    display: none;
+    transition: all 5s ease;
+    flex-direction: column;
+    padding: 20px;
+    animation: moveDown .4s ease forwards;
+    position: absolute;
+    background-color: white;
+    top: -240px;
+    right: 0px;
+    left: auto;
+    width: 300px;
+    z-index: 100;
+}
+
+
+.flagHoverFlex {
+    display: flex;
+    width: 260px;
+    justify-content: space-between;
+    height: 170px;
+    flex-direction: column;
+}
+
+#save {
+    height: 40px;
+    outline: none;
+    position: relative;
+    font-family: PoppinsMed;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    background-color: var(--orangeButtons);
+}
+
+.topBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 0;
+    border: 1px solid var(--grayOutline);
+}
+
+.topBarFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 140px;
+    height: 76px;
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+.rightTopIcons {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 25px;
+}
+
+.rightTopIcons nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.rightTopIcons nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    text-decoration: none;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    text-align: center;
+}
+
+.rightTopIcons nav ul li {
+    color: var(--IconsColor);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+}
+
+@keyframes dropDown {
+    0% {
+    
+    }
+
+    100% {
+        top: 75px;
+    }
+}
+
+.topBarIcons:hover .dropDown {
+    display: flex;
+}
+
+.dropDown:hover {
+    display: flex;
+}
+
+.dropDown2 {
+    width: 290px;
+    box-sizing: border-box;
+    padding: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropDown2 button:nth-child(1) {
+    background-color: var(--orangeButtons);
+    color: white;
+}
+
+.dropDown2 button:nth-child(2) {
+    background-color: white;
+    color: var(--orangeButtons);
+    border: 1px solid var(--orangeButtons);
+}
+
+.dropDown2 button {
+    cursor: pointer;
+    height: 35px;
+    border-radius: 5px;
+    font-family: PoppinsMed;
+    outline: none;
+    border: none;
+}
+
+.dropDown4 {
+    width: 340px;
+    box-sizing: border-box;
+    padding: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropDown4 button {
+    background-color: var(--orangeButtons);
+    color: white;
+    font-family: PoppinsMed;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.dropDown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: auto;
+    animation: dropDown .2s ease forwards;
+    right: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 2px solid #e6e6e6;
+    border-top: none;
+}
+
+.dropDown a {
+    display: flex;
+    flex-direction: row;
+    font-family: PoppinsMed;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    font-size: 12px;
+    width: 200px;
+}
+
+.dropDown a:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+
+.advertise {
+    height: 45px;
+    background-color: white;
+    display: flex;
+    padding-left: 160px;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    border-bottom: 1px solid rgba(176, 176, 176, 0.442);
+}
+
+.advertise p {
+    margin: 0;
+}
+
+.women {
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.men {
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.men:hover .menHover {
+    display: flex;
+}
+
+.menHover:hover {
+    display: flex;
+}
+
+.women:hover > p {
+    color: #F38730;
+    cursor: pointer;
+}
+
+.women:hover .womenHover {
+    display: flex;
+}
+
+.womenHover:hover {
+    display: flex;
+}
+
+.men:hover > p{
+    color: #F38730;
+    cursor: pointer;
+}
+
+.menHover {
+    top: 163px;
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    gap: 100px;
+    padding: 24px;
+    width: 1150px;
+    z-index: 100;
+    height: 445px;
+    left: 160px;
+    justify-content: space-between;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px  rgb(162, 162, 162);
+}
+
+.womenHover {
+    top: 163px;
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    gap: 100px;
+    padding: 24px;
+    width: 1150px;
+    z-index: 100;
+    height: 445px;
+    justify-content: space-between;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px  rgb(162, 162, 162);
+}
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    position: relative;
+    height: 200px;
+}
+
+.pics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.top3Pics {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.top3Pics img {
+    transition: all .3s ease;
+    position: relative;
+}
+
+.top3Pics img:hover {
+    transform: scale(1.12);
+}
+
+.leftListChilds {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.leftListChilds a {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+    font-family: PoppinsReg;
+    font-weight: 600;
+}
+
+.leftListChilds p {
+    margin: 0;
+    padding: 0;
+}
+
+.leftListChilds a:hover {
+    color: var(--orangeButtons);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.rightListChilds {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 160px;
+}
+
+.rightListChilds a {
+    font-size: 14px;
+    color: black;
+    font-family: PoppinsReg;
+    font-weight: 600;
+}
+
+.rightListChilds a:hover {
+    color: #F38730;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.list p {
+    font-size: 12px;
+    margin: 5px;
+    margin-left: 0px;
+    text-align: left;
+}
+
+.list p:hover {
+    color: #F38730;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.list h5 {
+    margin: 5px;
+    padding: 0;
+}
+
+.leftList {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: relative;
+}
+
+
+.searchBox {
+    display: flex;
+    width: 633px;
+    position: relative;
+}
+
+.searchTab {
+    width: 633px;
+    height: 41px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    padding-left: 15px;
+    padding-right: 50px;
+    font-family: PoppinsMed;
+    border: 1px solid rgba(176, 176, 176, 0.442);
+}
+
+.searchBox a {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.bottom-flexBox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 1165px;
+    max-width: 1920px;
+    padding: 0 50px;
+    position: relative;
+}
+
+.ads {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.dailyOffers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-sizing: border-box;
+    overflow: hidden;
+}
